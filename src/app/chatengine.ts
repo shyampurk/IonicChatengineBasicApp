@@ -11,8 +11,8 @@ export class ChatEngine {
   constructor() {
     this.instance = ChatEngineCore.create(
       {
-        publishKey: 'pub-c-508821e1-5e68-4774-bcad-f773a0497bd5',
-        subscribeKey: 'sub-c-72db42c6-da0c-11e8-abf2-1e598b800e69',
+        publishKey: '<PUBNUB PUBLISH KEY>',
+        subscribeKey: '<PUBNUB SUBSCRIBE KEY>',
         presenceTimeout: 10,
         heartbeatInterval: 4
       },
