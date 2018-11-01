@@ -1,0 +1,7 @@
+{
+  "name": "IonicChatengineBasicApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

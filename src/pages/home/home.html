@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar >
+    <ion-title>
+      Ionic Chat App ( {{ce.me.state.full}} )
+    </ion-title>
+  </ion-navbar>
+  <ion-item no-lines>
+    <ion-avatar item-start *ngFor="let user of getUsers(ce.chat.users)">
+       <img src="{{user.state.avatar}}"><h3 align="center">{{user.state.first}}</h3>
+    </ion-avatar>
+  </ion-item>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item text-wrap *ngFor="let msg of messages">
+      <ion-avatar item-start>
+        <img src='{{msg.sender.state.avatar}}'>
+      </ion-avatar>
+      <h2>{{msg.sender.state.first}} <span class="time-display">{{msg.rcvdTime}}</span></h2>
+      <p>{{msg.data.text}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <input type="text" class="form-control" placeholder="Your Messages..." [(ngModel)]="message" (keyup.enter)="send()">
+    <ion-buttons right>
+        <button (click)="send()" ion-button icon-only item-right class="send-chat-button">
+             <ion-icon name="send"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
