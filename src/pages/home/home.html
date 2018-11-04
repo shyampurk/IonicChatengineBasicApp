@@ -13,11 +13,36 @@
 <ion-content padding>
   <ion-list>
     <ion-item text-wrap *ngFor="let msg of messages">
-      <ion-avatar item-start>
-        <img src='{{msg.sender.state.avatar}}'>
-      </ion-avatar>
-      <h2>{{msg.sender.state.first}} <span class="time-display">{{msg.rcvdTime}}</span></h2>
-      <p>{{msg.data.text}}</p>
+      <ion-grid *ngIf="msg.isSelf">
+      	<ion-row>
+	    	<ion-col>
+	    	   <div style="float:right; text-align: right">
+			      <h2>{{msg.sender.state.first}} <span class="time-display">{{msg.rcvdTime}}</span></h2>
+			      <p>{{msg.data.text}} </p>
+		  		</div>
+		  	</ion-col>
+		  	<ion-col col-auto>
+		      <ion-avatar style="float:right;">
+		        <img src='{{msg.sender.state.avatar}}'>
+		      </ion-avatar>
+	    	</ion-col>
+	  	</ion-row>
+      </ion-grid>
+      <ion-grid *ngIf="!msg.isSelf">
+      	<ion-row>
+	    	<ion-col col-auto>
+		      <ion-avatar>
+		        <img src='{{msg.sender.state.avatar}}'>
+		      </ion-avatar>
+	    	</ion-col>
+	    	<ion-col>
+	    	   <div>
+			      <h2>{{msg.sender.state.first}} <span class="time-display">{{msg.rcvdTime}}</span></h2>
+			      <p>{{msg.data.text}} </p>
+		  		</div>
+		  	</ion-col>
+		</ion-row>
+      </ion-grid>
     </ion-item>
   </ion-list>
 </ion-content>
