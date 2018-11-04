@@ -91,6 +91,9 @@ export class HomePage {
             this.ce.instance.on('message', (payload) => {
 
               console.log("New message from " + payload.sender.name);
+              
+              // if this message was sent by this client
+              payload.isSelf = payload.sender.name === 'Me';
 
               //Add human readable timestamp for chat message
               payload.rcvdTime = this.getCurrentTime();
