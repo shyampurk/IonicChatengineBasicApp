@@ -20,7 +20,7 @@ Close the repo and install the module dependencies for Ionic and Angular core li
     
 ### Step 3 - Generate the Publish and Subscribe Key
 
-Generate your PubNub Publish and Subscribe key by following the first step of [ChatEngine quickstart] guide(https://www.pubnub.com/tutorials/chatengine/)
+Generate your PubNub Publish and Subscribe key by following the first step of [ChatEngine quickstart guide](https://www.pubnub.com/tutorials/chatengine/)
 
 ### Step 4 - Add the keys in code
 
