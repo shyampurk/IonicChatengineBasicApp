@@ -34,4 +34,6 @@ Run the app
 
     ionic serve
     
-Alternatively, you can compile this into a native android app under Android Studio by building with Cordova. 
+This will open up the default browser window to run the app. Since this is a chat app, you can open another browser to login as a different user for chatting. For  best results, you can test it by launching two instances of the app, one from Chrome and the other from Firefox. 
+
+Alternatively, you can compile this into a native android app under Android Studio by building with Cordova and launch from multiple android devices. 
