@@ -151,13 +151,13 @@ export class HomePage {
     }
   }
 
-  getCurrentTime() : string {
+  private getCurrentTime() : string {
 
     return new Date().toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
 
   }
 
-  generatePerson(online): any {
+  private generatePerson(online): any {
 
         let myChatUser = JSON.parse(localStorage.getItem("myChatUser"));
 
