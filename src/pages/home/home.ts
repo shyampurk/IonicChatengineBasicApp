@@ -80,6 +80,11 @@ export class HomePage {
               this.ce.chat = this.ce.instance.global;
               console.log("ChatEngine is ready");
 
+              this.ce.chat.search({
+                event: 'message',
+                limit: 6
+              });
+
             });
 
             this.ce.instance.on('$.online.*', (payload) => {
